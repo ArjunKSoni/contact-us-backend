@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", async (req, res) => {
-    console.log(req.body);
+    console.log(req.body.html);
 
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
@@ -32,7 +32,7 @@ app.post("/", async (req, res) => {
 
     let options = {
       from: "ArjunKSoni1234@gmail.com",
-      to: 'aksoni0520@gmail.com',
+        to: 'info@redpositive.in',
         subject: "Assignment React Native by Arjun Kumar Soni",
         html: req.body.html
     };
