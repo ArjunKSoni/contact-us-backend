@@ -8,16 +8,6 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 
 
-const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: {
-        user: "ArjunKSoni1234@gmail.com",
-        pass: "ejgtvltvjjzgzuzt",
-    },
-});
-
 // session creation   npm i express-session
 // var session=require("express-session")
 
@@ -29,6 +19,17 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res) => {
     console.log(req.body);
+
+    const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        auth: {
+            user: "ArjunKSoni1234@gmail.com",
+            pass: "ejgtvltvjjzgzuzt",
+        },
+    });
+
     let options = {
       from: "ArjunKSoni1234@gmail.com",
       to: 'aksoni0520@gmail.com',
