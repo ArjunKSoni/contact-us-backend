@@ -4,6 +4,10 @@ var cors = require('cors')
 const nodemailer = require("nodemailer");
 const port = process.env.PORT || 4000
 
+
+app.use(express.json())
+
+
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
@@ -24,6 +28,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", async (req, res) => {
+    console.log(req.body);
     let options = {
       from: "ArjunKSoni1234@gmail.com",
       to: 'aksoni0520@gmail.com',
