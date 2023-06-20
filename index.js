@@ -32,7 +32,7 @@ app.post("/", async (req, res) => {
 
     let options = {
       from: "ArjunKSoni1234@gmail.com",
-        to: 'info@redpositive.in',
+        to: 'aksoni0520@gmail.com',       //info@redpositive.in
         subject: "Assignment React Native by Arjun Kumar Soni",
         html: req.body.html
     };
